@@ -109,7 +109,7 @@ export default function BdayPage() {
             Special Cards for Kareena
           </h1>
           <p style={{ color: "#f9a8d4", fontSize: "clamp(1rem, 2vw, 1.25rem)", fontWeight: 300, fontFamily: "'Poppins', sans-serif" }}>
-            💌 Each card holds a piece of my heart 💌
+            💌 Each card holds a special message 💌
           </p>
           <div
             style={{
@@ -316,7 +316,7 @@ export default function BdayPage() {
                 fontFamily: "'Poppins', sans-serif",
               }}
             >
-              You are an incredible and clumsy friend and I&apos;m so greateful that now i have one friend like haha.
+              You are an incredible and clumsy friend and I&apos;m so greateful that now i have one friend like you hehe😁.
               May this year bring you endless joy, success, and all the beautiful things you deserve!
               Here&apos;s to our  friendship! 🥂
             </p>
@@ -348,4 +348,5 @@ export default function BdayPage() {
       </div>
     </div>
   );
+
 }
