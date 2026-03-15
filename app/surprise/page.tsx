@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/purity */
 /* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
@@ -11,17 +12,17 @@ export default function SurprisePage() {
   const [hearts, setHearts] = useState<{ id: number; left: string; delay: string; duration: string }[]>([]);
 
   useEffect(() => {
-    const generatedConfetti = Array.from({ length: 50 }, (_, i) => ({
+    const generatedConfetti = Array.from({ length: 60 }, (_, i) => ({
       id: i,
       left: `${Math.random() * 100}%`,
-      color: ["#ff69b4", "#ffd700", "#ff1493", "#00bfff", "#ff6347", "#7b68ee", "#32cd32", "#ff4500", "#da70d6"][Math.floor(Math.random() * 9)],
+      color: ["#38bdf8", "#fbbf24", "#a78bfa", "#34d399", "#f472b6", "#fb923c", "#818cf8", "#22d3ee", "#f87171"][Math.floor(Math.random() * 9)],
       delay: `${Math.random() * 3}s`,
       size: `${6 + Math.random() * 10}px`,
       duration: 3 + Math.random() * 3,
     }));
     setConfetti(generatedConfetti);
 
-    const generatedHearts = Array.from({ length: 20 }, (_, i) => ({
+    const generatedHearts = Array.from({ length: 15 }, (_, i) => ({
       id: i,
       left: `${Math.random() * 100}%`,
       delay: `${Math.random() * 5}s`,
@@ -47,7 +48,7 @@ export default function SurprisePage() {
     <div
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden"
       style={{
-        background: "radial-gradient(ellipse at 50% 50%, #2d0a3e 0%, #1a0525 40%, #000000 100%)",
+        background: "radial-gradient(ellipse at 50% 50%, #1e1b4b 0%, #0f0a2e 40%, #000000 100%)",
       }}
     >
       {/* Confetti Rain */}
@@ -59,7 +60,7 @@ export default function SurprisePage() {
             left: c.left,
             width: c.size,
             height: c.size,
-            borderRadius: "50%",
+            borderRadius: Math.random() > 0.5 ? "50%" : "2px",
             backgroundColor: c.color,
             animationName: "confettiFall",
             animationDuration: `${c.duration}s`,
@@ -70,7 +71,7 @@ export default function SurprisePage() {
         />
       ))}
 
-      {/* Floating Hearts */}
+      {/* Floating Stars */}
       {hearts.map((h) => (
         <div
           key={h.id}
@@ -87,7 +88,7 @@ export default function SurprisePage() {
             opacity: 0.6,
           }}
         >
-          💖
+          ⭐
         </div>
       ))}
 
@@ -116,12 +117,14 @@ export default function SurprisePage() {
               fontSize: "clamp(3.5rem, 9vw, 6rem)",
               fontWeight: 900,
               letterSpacing: "0.05em",
-              background: "linear-gradient(135deg, #ff1493, #ff69b4, #ffd700, #ff6347, #ff1493)",
+              background: "linear-gradient(135deg, #38bdf8, #a78bfa, #fbbf24, #f472b6, #38bdf8)",
               backgroundSize: "400% 400%",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
-              filter: "drop-shadow(0 0 40px rgba(255,20,147,0.6))",
+              
+              animationIterationCount: "infinite",
+              filter: "drop-shadow(0 0 40px rgba(56,189,248,0.6))",
               margin: 0,
             }}
           >
@@ -129,7 +132,7 @@ export default function SurprisePage() {
           </h1>
         )}
 
-        {/* Kareena's Name */}
+        {/* Jaanu's Name */}
         {phase >= 3 && (
           <div style={{
             animationName: "fadeInScale",
@@ -137,16 +140,16 @@ export default function SurprisePage() {
             animationTimingFunction: "ease-out",
             animationFillMode: "forwards",
           }}>
-            <p style={{ fontSize: "1.5rem", color: "#f9a8d4", fontWeight: 300, fontFamily: "'Poppins', sans-serif", margin: "0 0 0.5rem 0" }}>
-              This is all for you,
+            <p style={{ fontSize: "1.5rem", color: "#c4b5fd", fontWeight: 300, fontFamily: "'Poppins', sans-serif", margin: "0 0 0.5rem 0" }}>
+              This is all for you, buddy!
             </p>
             <h2
               style={{
                 fontFamily: "'Great Vibes', cursive",
                 fontSize: "clamp(4rem, 10vw, 7rem)",
                 fontWeight: 900,
-                color: "#ff69b4",
-                filter: "drop-shadow(0 0 30px rgba(255,105,180,0.6))",
+                color: "#a78bfa",
+                filter: "drop-shadow(0 0 30px rgba(167,139,250,0.6))",
                 animationName: "glow",
                 animationDuration: "2s",
                 animationTimingFunction: "ease-in-out",
@@ -154,7 +157,7 @@ export default function SurprisePage() {
                 margin: 0,
               }}
             >
-              Kareena ✨
+              Jaanu ✨
             </h2>
           </div>
         )}
@@ -169,7 +172,7 @@ export default function SurprisePage() {
               animationFillMode: "forwards",
               background: "rgba(255, 255, 255, 0.05)",
               backdropFilter: "blur(20px)",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
+              border: "1px solid rgba(167,139,250,0.2)",
               borderRadius: "20px",
               padding: "2rem",
               maxWidth: "32rem",
@@ -179,12 +182,12 @@ export default function SurprisePage() {
             <p
               style={{
                 fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
-                color: "#fce7f3",
+                color: "#e0e7ff",
                 lineHeight: 1.7,
                 fontFamily: "'Dancing Script', cursive",
               }}
             >
-              🌸 Wishing you the most amazing birthday filled with love, laughter, and all the happiness in the world! You deserve every bit of it! 🌸
+              🌟 Wishing you the most epic birthday ever, Jaanu! From our childhood days to now being the best buddies — you&apos;re the realest one out there! Here&apos;s to more crazy adventures together! 🌟
             </p>
             <div style={{ marginTop: "1rem", display: "flex", justifyContent: "center", gap: "0.5rem", fontSize: "1.875rem" }}>
               {[0, 1, 2].map((i) => (
@@ -198,7 +201,7 @@ export default function SurprisePage() {
                     animationDelay: `${i * 0.2}s`,
                   }}
                 >
-                  {["💖", "💝", "💖"][i]}
+                  {["🤜", "💥", "🤛"][i]}
                 </span>
               ))}
             </div>
@@ -221,10 +224,10 @@ export default function SurprisePage() {
               fontSize: "1.25rem",
               fontWeight: 700,
               color: "white",
-              border: "none",
+              border: "2px solid rgba(167,139,250,0.3)",
               cursor: "pointer",
-              background: "linear-gradient(135deg, #ff69b4, #da70d6, #9370db)",
-              boxShadow: "0 0 40px rgba(255,105,180,0.5), 0 0 80px rgba(218,112,214,0.3)",
+              background: "linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7)",
+              boxShadow: "0 0 40px rgba(99,102,241,0.5), 0 0 80px rgba(139,92,246,0.3), inset 0 1px 0 rgba(255,255,255,0.1)",
               transition: "all 0.3s ease",
               position: "relative",
             }}
