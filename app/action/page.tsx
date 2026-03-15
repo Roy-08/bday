@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/purity */
 /* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
@@ -10,10 +11,10 @@ export default function ActionPage() {
   const [confetti, setConfetti] = useState<{ id: number; left: string; color: string; delay: string; duration: string }[]>([]);
 
   useEffect(() => {
-    const generatedConfetti = Array.from({ length: 30 }, (_, i) => ({
+    const generatedConfetti = Array.from({ length: 40 }, (_, i) => ({
       id: i,
       left: `${Math.random() * 100}%`,
-      color: ["#ff69b4", "#ffd700", "#ff1493", "#00bfff", "#ff6347", "#7b68ee", "#ff4500", "#32cd32"][Math.floor(Math.random() * 8)],
+      color: ["#38bdf8", "#fbbf24", "#a78bfa", "#34d399", "#f472b6", "#fb923c", "#818cf8", "#22d3ee"][Math.floor(Math.random() * 8)],
       delay: `${Math.random() * 5}s`,
       duration: `${3 + Math.random() * 4}s`,
     }));
@@ -35,7 +36,7 @@ export default function ActionPage() {
     <div
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden"
       style={{
-        background: "radial-gradient(ellipse at 50% 50%, #1a0520 0%, #0d0010 50%, #000000 100%)",
+        background: "radial-gradient(ellipse at 50% 50%, #1a0a3e 0%, #0d0020 50%, #000000 100%)",
       }}
     >
       {/* Confetti */}
@@ -47,7 +48,7 @@ export default function ActionPage() {
             left: c.left,
             width: "12px",
             height: "12px",
-            borderRadius: "2px",
+            borderRadius: Math.random() > 0.5 ? "50%" : "2px",
             backgroundColor: c.color,
             animationName: "confettiFall",
             animationDuration: c.duration,
@@ -64,11 +65,11 @@ export default function ActionPage() {
         style={{
           top: "5rem",
           left: "5rem",
-          width: "10rem",
-          height: "10rem",
+          width: "12rem",
+          height: "12rem",
           borderRadius: "50%",
           opacity: 0.2,
-          background: "radial-gradient(circle, #ff69b4, transparent)",
+          background: "radial-gradient(circle, #38bdf8, transparent)",
           animationName: "pulse",
           animationDuration: "2s",
           animationTimingFunction: "ease-in-out",
@@ -80,16 +81,30 @@ export default function ActionPage() {
         style={{
           bottom: "5rem",
           right: "5rem",
-          width: "15rem",
-          height: "15rem",
+          width: "18rem",
+          height: "18rem",
           borderRadius: "50%",
           opacity: 0.15,
-          background: "radial-gradient(circle, #7b68ee, transparent)",
+          background: "radial-gradient(circle, #a78bfa, transparent)",
           animationName: "pulse",
           animationDuration: "2s",
           animationTimingFunction: "ease-in-out",
           animationIterationCount: "infinite",
           animationDelay: "1s",
+        }}
+      />
+      <div
+        className="absolute"
+        style={{
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "25rem",
+          height: "25rem",
+          borderRadius: "50%",
+          opacity: 0.08,
+          background: "radial-gradient(circle, #fbbf24, transparent)",
+          filter: "blur(40px)",
         }}
       />
 
@@ -120,12 +135,12 @@ export default function ActionPage() {
               fontSize: "clamp(3.5rem, 9vw, 6rem)",
               fontWeight: 900,
               letterSpacing: "0.1em",
-              background: "linear-gradient(135deg, #ff69b4, #ff1493, #ff69b4)",
+              background: "linear-gradient(135deg, #38bdf8, #818cf8, #38bdf8)",
               backgroundSize: "200% 200%",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
-              filter: "drop-shadow(0 0 30px rgba(255,105,180,0.5))",
+              filter: "drop-shadow(0 0 30px rgba(56,189,248,0.5))",
               margin: 0,
             }}
           >
@@ -148,7 +163,7 @@ export default function ActionPage() {
                 key={i}
                 style={{
                   fontSize: "3rem",
-                  color: "#f472b6",
+                  color: "#a78bfa",
                   animationName: "bounceIn",
                   animationDuration: "1s",
                   animationTimingFunction: "ease-out",
@@ -177,7 +192,7 @@ export default function ActionPage() {
                 fontSize: "clamp(4rem, 10vw, 8rem)",
                 fontWeight: 900,
                 letterSpacing: "0.1em",
-                background: "linear-gradient(135deg, #ffd700, #ff6347, #ff1493, #ffd700)",
+                background: "linear-gradient(135deg, #fbbf24, #f97316, #ef4444, #fbbf24)",
                 backgroundSize: "300% 300%",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -186,7 +201,7 @@ export default function ActionPage() {
                 animationDuration: "2s",
                 animationTimingFunction: "ease",
                 animationIterationCount: "infinite",
-                filter: "drop-shadow(0 0 40px rgba(255,99,71,0.6))",
+                filter: "drop-shadow(0 0 40px rgba(251,191,36,0.6))",
                 margin: 0,
               }}
             >
@@ -211,10 +226,10 @@ export default function ActionPage() {
               fontSize: "1.25rem",
               fontWeight: 700,
               color: "white",
-              border: "none",
+              border: "2px solid rgba(251,191,36,0.3)",
               cursor: "pointer",
-              background: "linear-gradient(135deg, #ff1493, #ff69b4, #ff1493)",
-              boxShadow: "0 0 40px rgba(255,20,147,0.5), 0 0 80px rgba(255,20,147,0.2)",
+              background: "linear-gradient(135deg, #f59e0b, #f97316, #ef4444)",
+              boxShadow: "0 0 40px rgba(245,158,11,0.4), 0 0 80px rgba(249,115,22,0.2), inset 0 1px 0 rgba(255,255,255,0.15)",
               transition: "all 0.3s ease",
               position: "relative",
             }}
@@ -245,7 +260,7 @@ export default function ActionPage() {
         ))}
       </div>
       <div className="absolute" style={{ right: "1.5rem", top: "50%", transform: "translateY(-50%)", display: "flex", flexDirection: "column", gap: "1.5rem", fontSize: "1.875rem", opacity: 0.6 }}>
-        {["🌟", "💫", "🌟"].map((emoji, i) => (
+        {["⚡", "💫", "⚡"].map((emoji, i) => (
           <span key={i} style={{
             animationName: "float",
             animationDuration: "3s",
