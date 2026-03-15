@@ -4,30 +4,37 @@
 import { useEffect, useState } from "react";
 
 const birthdayCards = [
- 
   {
-    image: "/img2.png",
-    message: "Your smile lights up every room you walk into. Never stop being the amazing person you are, Kareena! ✨",
-    color: "from-purple-500 to-indigo-600",
-    bgGlow: "rgba(147,51,234,0.3)",
-    emoji: "🌸",
-    gradientBg: "linear-gradient(135deg, #a855f7, #4f46e5)",
+    image: "/img1.png",
+    message: "From playground fights to late-night talks — you've been my ride or die since day one, Jaanu! Never change, buddy! ✨",
+    color: "from-blue-500 to-indigo-600",
+    bgGlow: "rgba(99,102,241,0.3)",
+    emoji: "🤝",
+    gradientBg: "linear-gradient(135deg, #6366f1, #4f46e5)",
   },
   {
-    image: "/img3.png",
-    message: "I hope so that you will achieve more in future dear...",
+    image: "/img2.png",
+    message: "I know you're gonna do big things in life, Jaanu. Sky's the limit for you, and I'll always be cheering the loudest! 🚀",
     color: "from-amber-500 to-orange-600",
-    bgGlow: "rgba(255,165,0,0.3)",
-    emoji: "🌺",
+    bgGlow: "rgba(251,191,36,0.3)",
+    emoji: "⚡",
     gradientBg: "linear-gradient(135deg, #f59e0b, #ea580c)",
   },
   {
-    image: "/img4.png",
-    message: "Here's to more adventures, more laughs, and more unforgettable memories together.",
-    color: "from-teal-500 to-cyan-600",
-    bgGlow: "rgba(0,206,209,0.3)",
+    image: "/img3.png",
+    message: "Here's to more adventures, more inside jokes, and more unforgettable memories together. Best buddies forever! 🔥",
+    color: "from-violet-500 to-purple-600",
+    bgGlow: "rgba(167,139,250,0.3)",
     emoji: "💫",
-    gradientBg: "linear-gradient(135deg, #14b8a6, #0891b2)",
+    gradientBg: "linear-gradient(135deg, #8b5cf6, #7c3aed)",
+  },
+  {
+    image: "/img4.png",
+    message: "Here's to more adventures, more inside jokes, and more unforgettable memories together. Best buddies forever! 🔥",
+    color: "from-violet-500 to-purple-600",
+    bgGlow: "rgba(167,139,250,0.3)",
+    emoji: "💫",
+    gradientBg: "linear-gradient(135deg, #8b5cf6, #7c3aed)",
   },
 ];
 
@@ -39,10 +46,10 @@ export default function BdayPage() {
   const [imageErrors, setImageErrors] = useState<Record<number, boolean>>({});
 
   useEffect(() => {
-    const generatedConfetti = Array.from({ length: 30 }, (_, i) => ({
+    const generatedConfetti = Array.from({ length: 40 }, (_, i) => ({
       id: i,
       left: `${Math.random() * 100}%`,
-      color: ["#ff69b4", "#ffd700", "#ff1493", "#da70d6", "#ff6347", "#7b68ee"][Math.floor(Math.random() * 6)],
+      color: ["#38bdf8", "#fbbf24", "#a78bfa", "#34d399", "#f472b6", "#818cf8"][Math.floor(Math.random() * 6)],
       delay: `${Math.random() * 5}s`,
     }));
     setConfetti(generatedConfetti);
@@ -67,7 +74,7 @@ export default function BdayPage() {
     <div
       className="relative min-h-screen overflow-hidden"
       style={{
-        background: "linear-gradient(180deg, #0d0015 0%, #1a0a2e 30%, #2d1b3d 60%, #1a0a2e 80%, #0d0015 100%)",
+        background: "linear-gradient(180deg, #000000 0%, #0f0a2e 20%, #1e1b4b 40%, #1e1b4b 60%, #0f0a2e 80%, #000000 100%)",
         paddingBottom: "5rem",
       }}
     >
@@ -80,7 +87,7 @@ export default function BdayPage() {
             left: c.left,
             width: "8px",
             height: "8px",
-            borderRadius: "50%",
+            borderRadius: Math.random() > 0.5 ? "50%" : "2px",
             backgroundColor: c.color,
             animation: `confettiFall ${3 + Math.random() * 3}s linear infinite`,
             animationDelay: c.delay,
@@ -97,19 +104,19 @@ export default function BdayPage() {
               fontSize: "clamp(3rem, 7vw, 5rem)",
               fontWeight: 900,
               marginBottom: "0.75rem",
-              background: "linear-gradient(135deg, #ffd700, #ff69b4, #ff1493, #ffd700)",
+              background: "linear-gradient(135deg, #38bdf8, #a78bfa, #fbbf24, #38bdf8)",
               backgroundSize: "300% 300%",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
               animation: "rainbowBg 3s ease infinite",
-              filter: "drop-shadow(0 0 20px rgba(255,215,0,0.4))",
+              filter: "drop-shadow(0 0 20px rgba(56,189,248,0.4))",
             }}
           >
-            Special Cards for Kareena
+            Special Cards for Jaanu
           </h1>
-          <p style={{ color: "#f9a8d4", fontSize: "clamp(1rem, 2vw, 1.25rem)", fontWeight: 300, fontFamily: "'Poppins', sans-serif" }}>
-            💌 Each card holds a special message 💌
+          <p style={{ color: "#c4b5fd", fontSize: "clamp(1rem, 2vw, 1.25rem)", fontWeight: 300, fontFamily: "'Poppins', sans-serif" }}>
+            🤜 Each card is a piece of our epic friendship 🤛
           </p>
           <div
             style={{
@@ -119,7 +126,7 @@ export default function BdayPage() {
               height: "2px",
               width: "10rem",
               borderRadius: "9999px",
-              background: "linear-gradient(90deg, transparent, #ff69b4, #ffd700, #ff69b4, transparent)",
+              background: "linear-gradient(90deg, transparent, #6366f1, #a78bfa, #6366f1, transparent)",
             }}
           />
         </div>
@@ -154,7 +161,7 @@ export default function BdayPage() {
                 transition: "all 0.5s ease",
                 background: "rgba(255,255,255,0.05)",
                 backdropFilter: "blur(20px)",
-                border: "1px solid rgba(255,255,255,0.1)",
+                border: "1px solid rgba(167,139,250,0.15)",
                 boxShadow: `0 20px 60px ${card.bgGlow}, 0 0 0 1px rgba(255,255,255,0.05)`,
                 cursor: "pointer",
               }}
@@ -262,7 +269,7 @@ export default function BdayPage() {
                 <p
                   style={{
                     fontSize: "clamp(1.1rem, 2vw, 1.25rem)",
-                    color: "#fce7f3",
+                    color: "#e0e7ff",
                     lineHeight: 1.7,
                     fontFamily: "'Dancing Script', cursive",
                   }}
@@ -270,9 +277,9 @@ export default function BdayPage() {
                   &ldquo;{card.message}&rdquo;
                 </p>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "0.75rem" }}>
-                  <div style={{ height: "1px", flex: 1, background: "linear-gradient(to right, transparent, #ec4899, transparent)", opacity: 0.3 }} />
-                  <span style={{ color: "#f472b6", fontSize: "0.875rem", fontWeight: 300 }}>with love</span>
-                  <div style={{ height: "1px", flex: 1, background: "linear-gradient(to right, transparent, #ec4899, transparent)", opacity: 0.3 }} />
+                  <div style={{ height: "1px", flex: 1, background: "linear-gradient(to right, transparent, #6366f1, transparent)", opacity: 0.3 }} />
+                  <span style={{ color: "#a78bfa", fontSize: "0.875rem", fontWeight: 300 }}>best buddies</span>
+                  <div style={{ height: "1px", flex: 1, background: "linear-gradient(to right, transparent, #6366f1, transparent)", opacity: 0.3 }} />
                 </div>
               </div>
             </div>
@@ -287,7 +294,7 @@ export default function BdayPage() {
             style={{
               background: "rgba(255, 255, 255, 0.05)",
               backdropFilter: "blur(20px)",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
+              border: "1px solid rgba(167,139,250,0.2)",
               borderRadius: "20px",
               maxWidth: "42rem",
               margin: "0 auto",
@@ -299,42 +306,44 @@ export default function BdayPage() {
               style={{
                 fontFamily: "'Great Vibes', cursive",
                 fontSize: "clamp(2.5rem, 5vw, 3.5rem)",
-                color: "#ff69b4",
-                filter: "drop-shadow(0 0 15px rgba(255,105,180,0.4))",
+                color: "#a78bfa",
+                filter: "drop-shadow(0 0 15px rgba(167,139,250,0.4))",
                 margin: "1rem 0",
               }}
             >
-              Happy Birthday, Kareena!
+              Happy Birthday, Jaanu!
             </h2>
             <p
               style={{
                 fontSize: "1.125rem",
-                color: "#fbcfe8",
+                color: "#c4b5fd",
                 lineHeight: 1.7,
                 maxWidth: "32rem",
                 margin: "0 auto",
                 fontFamily: "'Poppins', sans-serif",
               }}
             >
-              You are an incredible and clumsy friend and I&apos;m so greateful that now i have one friend like you hehe😁.
-              May this year bring you endless joy, success, and all the beautiful things you deserve!
-              Here&apos;s to our  friendship! 🥂
+              You&apos;re the most amazing and wonderfully clumsy best buddy anyone could ask for!
+              From our childhood days running around like maniacs to now being the ultimate duo —
+              I&apos;m so grateful to have you in my life, Jaanu.
+              May this year bring you endless joy, success, and all the epic things you deserve!
+              Here&apos;s to our legendary friendship! 🥂
             </p>
             <div style={{ display: "flex", justifyContent: "center", gap: "1rem", fontSize: "2.25rem", paddingTop: "0.5rem", marginTop: "1rem" }}>
-              {["🌸", "💖", "🎀", "💖", "🌸"].map((emoji, i) => (
+              {["⚡", "🤜", "💥", "🤛", "⚡"].map((emoji, i) => (
                 <span key={i} style={{ animation: "float 3s ease-in-out infinite", animationDelay: `${i * 0.3}s` }}>{emoji}</span>
               ))}
             </div>
             <p
               style={{
-                color: "#f472b6",
+                color: "#a78bfa",
                 fontSize: "1.125rem",
                 fontWeight: 500,
                 paddingTop: "1rem",
                 fontFamily: "'Dancing Script', cursive",
               }}
             >
-              — Your Friend  💕
+              — Your Best Buddy Forever 🔥
             </p>
           </div>
         </div>
@@ -348,5 +357,4 @@ export default function BdayPage() {
       </div>
     </div>
   );
-
 }
