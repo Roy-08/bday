@@ -11,7 +11,7 @@ function CSSCake() {
       animationDuration: "4s",
       animationTimingFunction: "ease-in-out",
       animationIterationCount: "infinite",
-      filter: "drop-shadow(0 20px 40px rgba(255,105,180,0.4))",
+      filter: "drop-shadow(0 20px 40px rgba(99,102,241,0.4))",
     }}>
       <div style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center" }}>
 
@@ -55,7 +55,7 @@ function CSSCake() {
                 style={{
                   width: "8px",
                   height: "40px",
-                  background: `linear-gradient(to bottom, ${["#ff69b4", "#7b68ee", "#ffd700"][i]}, ${["#ff1493", "#5b48c2", "#ffaa00"][i]})`,
+                  background: `linear-gradient(to bottom, ${["#38bdf8", "#a78bfa", "#fbbf24"][i]}, ${["#0284c7", "#7c3aed", "#d97706"][i]})`,
                   borderRadius: "2px",
                   boxShadow: "inset -2px 0 4px rgba(0,0,0,0.2)",
                 }}
@@ -70,7 +70,7 @@ function CSSCake() {
             style={{
               width: "140px",
               height: "60px",
-              background: "linear-gradient(180deg, #ff9ec7 0%, #ff69b4 50%, #e0559e 100%)",
+              background: "linear-gradient(180deg, #93c5fd 0%, #6366f1 50%, #4f46e5 100%)",
               borderRadius: "12px 12px 4px 4px",
               border: "2px solid rgba(255,255,255,0.2)",
               boxShadow: "inset 0 -8px 16px rgba(0,0,0,0.15), inset 0 4px 8px rgba(255,255,255,0.3), 0 4px 12px rgba(0,0,0,0.3)",
@@ -85,7 +85,7 @@ function CSSCake() {
                   style={{
                     width: "10px",
                     height: `${h}px`,
-                    background: "linear-gradient(to bottom, #fff0f5, #ffb6d9)",
+                    background: "linear-gradient(to bottom, #e0e7ff, #a5b4fc)",
                     borderRadius: "0 0 50% 50%",
                     opacity: 0.9,
                   }}
@@ -101,13 +101,12 @@ function CSSCake() {
                     width: "6px",
                     height: "6px",
                     borderRadius: "50%",
-                    background: ["#ffd700", "#ff6347", "#7b68ee", "#ffd700", "#ff6347"][i],
-                    boxShadow: `0 0 4px ${["#ffd700", "#ff6347", "#7b68ee", "#ffd700", "#ff6347"][i]}`,
+                    background: ["#fbbf24", "#38bdf8", "#a78bfa", "#fbbf24", "#34d399"][i],
+                    boxShadow: `0 0 4px ${["#fbbf24", "#38bdf8", "#a78bfa", "#fbbf24", "#34d399"][i]}`,
                   }}
                 />
               ))}
             </div>
-            {/* Swirl decoration */}
             <div style={{ position: "absolute", bottom: "16px", left: 0, right: 0, display: "flex", justifyContent: "center" }}>
               <div style={{
                 width: "80px",
@@ -125,14 +124,13 @@ function CSSCake() {
             style={{
               width: "200px",
               height: "70px",
-              background: "linear-gradient(180deg, #c9a0ff 0%, #a855f7 50%, #9333ea 100%)",
+              background: "linear-gradient(180deg, #c4b5fd 0%, #8b5cf6 50%, #7c3aed 100%)",
               borderRadius: "8px 8px 4px 4px",
               border: "2px solid rgba(255,255,255,0.15)",
               boxShadow: "inset 0 -8px 16px rgba(0,0,0,0.15), inset 0 4px 8px rgba(255,255,255,0.2), 0 4px 12px rgba(0,0,0,0.3)",
               position: "relative",
             }}
           >
-            {/* Frosting drips */}
             <div style={{ position: "absolute", bottom: "-8px", left: 0, right: 0, display: "flex", justifyContent: "space-around", padding: "0 12px" }}>
               {[14, 20, 12, 18, 16, 14, 20, 12].map((h, i) => (
                 <div
@@ -147,15 +145,13 @@ function CSSCake() {
                 />
               ))}
             </div>
-            {/* Heart decorations */}
             <div style={{ position: "absolute", top: "16px", left: 0, right: 0, display: "flex", justifyContent: "center", gap: "24px" }}>
               {[0, 1, 2].map((i) => (
-                <div key={i} style={{ color: "#ff69b4", fontSize: "14px", textShadow: "0 0 6px rgba(255,105,180,0.6)" }}>
-                  ♥
+                <div key={i} style={{ color: "#fbbf24", fontSize: "14px", textShadow: "0 0 6px rgba(251,191,36,0.6)" }}>
+                  ★
                 </div>
               ))}
             </div>
-            {/* Zigzag line */}
             <div style={{ position: "absolute", bottom: "16px", left: "16px", right: "16px", display: "flex", justifyContent: "center" }}>
               <svg width="160" height="10" viewBox="0 0 160 10">
                 <path d="M0,5 L10,0 L20,5 L30,0 L40,5 L50,0 L60,5 L70,0 L80,5 L90,0 L100,5 L110,0 L120,5 L130,0 L140,5 L150,0 L160,5" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" fill="none" />
@@ -170,14 +166,13 @@ function CSSCake() {
             style={{
               width: "260px",
               height: "80px",
-              background: "linear-gradient(180deg, #fda4af 0%, #fb7185 50%, #e11d48 100%)",
+              background: "linear-gradient(180deg, #fde68a 0%, #f59e0b 50%, #d97706 100%)",
               borderRadius: "8px 8px 12px 12px",
               border: "2px solid rgba(255,255,255,0.15)",
               boxShadow: "inset 0 -10px 20px rgba(0,0,0,0.2), inset 0 4px 8px rgba(255,255,255,0.2), 0 8px 24px rgba(0,0,0,0.4)",
               position: "relative",
             }}
           >
-            {/* Frosting drips */}
             <div style={{ position: "absolute", bottom: "-8px", left: 0, right: 0, display: "flex", justifyContent: "space-around", padding: "0 16px" }}>
               {[16, 22, 14, 20, 18, 16, 22, 14, 18, 20].map((h, i) => (
                 <div
@@ -185,20 +180,19 @@ function CSSCake() {
                   style={{
                     width: "10px",
                     height: `${h}px`,
-                    background: "linear-gradient(to bottom, #ffe0e6, #fda4af)",
+                    background: "linear-gradient(to bottom, #fef3c7, #fde68a)",
                     borderRadius: "0 0 50% 50%",
                     opacity: 0.9,
                   }}
                 />
               ))}
             </div>
-            {/* Star decorations */}
             <div style={{ position: "absolute", top: "16px", left: 0, right: 0, display: "flex", justifyContent: "center", gap: "20px" }}>
               {[0, 1, 2, 3, 4].map((i) => (
                 <div key={i} style={{
-                  color: "#ffd700",
+                  color: "#6366f1",
                   fontSize: "12px",
-                  textShadow: "0 0 6px rgba(255,215,0,0.6)",
+                  textShadow: "0 0 6px rgba(99,102,241,0.6)",
                   animationName: "sparkle",
                   animationDuration: "2s",
                   animationTimingFunction: "ease-in-out",
@@ -209,11 +203,10 @@ function CSSCake() {
                 </div>
               ))}
             </div>
-            {/* Ribbon decoration */}
             <div style={{ position: "absolute", bottom: "20px", left: "24px", right: "24px" }}>
               <div style={{
                 height: "8px",
-                background: "linear-gradient(90deg, transparent, rgba(255,215,0,0.5), rgba(255,255,255,0.3), rgba(255,215,0,0.5), transparent)",
+                background: "linear-gradient(90deg, transparent, rgba(99,102,241,0.5), rgba(255,255,255,0.3), rgba(99,102,241,0.5), transparent)",
                 borderRadius: "4px",
               }} />
             </div>
@@ -226,14 +219,13 @@ function CSSCake() {
             style={{
               width: "300px",
               height: "20px",
-              background: "linear-gradient(180deg, #ffd700 0%, #daa520 50%, #b8860b 100%)",
+              background: "linear-gradient(180deg, #a78bfa 0%, #7c3aed 50%, #6d28d9 100%)",
               borderRadius: "0 0 50% 50% / 0 0 100% 100%",
-              boxShadow: "0 4px 16px rgba(218,165,32,0.4), 0 8px 32px rgba(0,0,0,0.3)",
+              boxShadow: "0 4px 16px rgba(124,58,237,0.4), 0 8px 32px rgba(0,0,0,0.3)",
               border: "1px solid rgba(255,255,255,0.2)",
               position: "relative",
             }}
           >
-            {/* Plate reflection */}
             <div
               style={{
                 position: "absolute",
@@ -298,7 +290,7 @@ export default function CakePage() {
     <div
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden"
       style={{
-        background: "radial-gradient(ellipse at 50% 30%, #2d1b3d 0%, #1a0a2e 40%, #000000 100%)",
+        background: "radial-gradient(ellipse at 50% 30%, #1e1b4b 0%, #0f0a2e 40%, #000000 100%)",
       }}
     >
       {/* Sparkles */}
@@ -309,7 +301,7 @@ export default function CakePage() {
           style={{
             left: s.left,
             top: s.top,
-            color: "#fde047",
+            color: "#fbbf24",
             animationName: "sparkle",
             animationDuration: "2s",
             animationTimingFunction: "ease-in-out",
@@ -332,7 +324,7 @@ export default function CakePage() {
           height: "20rem",
           borderRadius: "50%",
           opacity: 0.1,
-          background: "radial-gradient(circle, #ff69b4, transparent)",
+          background: "radial-gradient(circle, #6366f1, transparent)",
           filter: "blur(60px)",
         }}
       />
@@ -345,7 +337,7 @@ export default function CakePage() {
           height: "15rem",
           borderRadius: "50%",
           opacity: 0.1,
-          background: "radial-gradient(circle, #ffd700, transparent)",
+          background: "radial-gradient(circle, #fbbf24, transparent)",
           filter: "blur(40px)",
         }}
       />
@@ -405,7 +397,7 @@ export default function CakePage() {
                 fontFamily: "'Dancing Script', cursive",
                 fontSize: "clamp(3rem, 8vw, 5rem)",
                 fontWeight: 900,
-                background: "linear-gradient(135deg, #ffd700, #ff69b4, #ff1493, #ffd700)",
+                background: "linear-gradient(135deg, #fbbf24, #f97316, #ef4444, #fbbf24)",
                 backgroundSize: "300% 300%",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -414,7 +406,7 @@ export default function CakePage() {
                 animationDuration: "3s",
                 animationTimingFunction: "ease",
                 animationIterationCount: "infinite",
-                filter: "drop-shadow(0 0 20px rgba(255,215,0,0.5))",
+                filter: "drop-shadow(0 0 20px rgba(251,191,36,0.5))",
                 margin: 0,
               }}
             >
@@ -425,7 +417,7 @@ export default function CakePage() {
                 fontFamily: "'Great Vibes', cursive",
                 fontSize: "clamp(3.5rem, 9vw, 6rem)",
                 fontWeight: 900,
-                color: "#ff69b4",
+                color: "#a78bfa",
                 animationName: "glow",
                 animationDuration: "2s",
                 animationTimingFunction: "ease-in-out",
@@ -433,7 +425,7 @@ export default function CakePage() {
                 margin: "0.5rem 0 0 0",
               }}
             >
-              Kareena! 🎀
+              Jaanu! 🎀
             </h2>
           </div>
         )}
@@ -449,14 +441,14 @@ export default function CakePage() {
               animationDelay: "0.5s",
               opacity: 0,
               fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
-              color: "#fbcfe8",
+              color: "#c4b5fd",
               fontWeight: 300,
               maxWidth: "28rem",
               marginTop: "0.5rem",
               fontFamily: "'Poppins', sans-serif",
             }}
           >
-            🎂 Make a wish and blow the candles! 🎂
+            🎂 Make a wish and blow the candles, buddy! 🎂
           </p>
         )}
 
@@ -476,10 +468,10 @@ export default function CakePage() {
               fontSize: "1.25rem",
               fontWeight: 700,
               color: "white",
-              border: "none",
+              border: "2px solid rgba(251,191,36,0.3)",
               cursor: "pointer",
-              background: "linear-gradient(135deg, #ffd700, #ff8c00, #ff6347)",
-              boxShadow: "0 0 40px rgba(255,215,0,0.4), 0 0 80px rgba(255,140,0,0.2)",
+              background: "linear-gradient(135deg, #fbbf24, #f97316, #ef4444)",
+              boxShadow: "0 0 40px rgba(251,191,36,0.4), 0 0 80px rgba(249,115,22,0.2), inset 0 1px 0 rgba(255,255,255,0.15)",
               transition: "all 0.3s ease",
               position: "relative",
             }}
